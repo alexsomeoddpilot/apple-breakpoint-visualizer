@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Breakpoints</title>
+  <style>
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  font-weight: 200;
+  color: #333;
+}
+.box {
+  width: 768px;
+  height: 1024px;
+  margin: 20px auto;
+
+  background: #FF6D6D;
+  border-radius: 5px;
+  -webkit-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+}
+.box:before {
+  content: "iPad mini, iPad Air";
+  font-size: 32px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1200px) {
+  .box {
+    width: 540px;
+    height: 960px;
+    background: #fff06d;
+  }
+  .box:before {
+    content: "iPhone 6 Plus";
+  }
+}
+@media (max-width: 700px) {
+  .box {
+    width: 375px;
+    height: 667px;
+    background: #97e365;
+  }
+  .box:before {
+    content: "iPhone 6";
+  }
+}
+@media (max-width: 560px) {
+  .box {
+    width: 320px;
+    height: 568px;
+    background: #41b2ec;
+  }
+  .box:before {
+    content: "iPhone 5, iPhone 5s";
+  }
+}
+@media (max-width: 400px) {
+  .box {
+    width: 320px;
+    height: 480px;
+  }
+  .box:before {
+    content: "iPhone, iPhone 3G, iPhone 4, iPhone 4s";
+  }
+}
+  </style>
+</head>
+<body>
+
+  <div class="box">
+
+  </div>
+
+</body>
+</html>
